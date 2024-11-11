@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #c00df7, rgb(118, 3, 146));
+}
+
+h1 {
+  background: aqua;
+  color: blue;
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 80vw;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.search-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+}
+
+.search .input {
+  font-size: 20px;
+  background: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 18px;
+  height: 50px;
+  width: 50px;
+  transition: 0.7s;
+}
+
+.search .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 18px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Khi có class search đi cùng đồng thời class active */
+/* Sẽ tác động vào class input để thay đổi chiều rộng của input*/
+.search.active .input {
+  width: 450px;
+  padding-left: 55px;
+}
+
+.search .btn:focus,
+.search .input:focus {
+  outline: none;
+}
+
+.fa-magnifying-glass {
+  color: #ccc;
+}
+
+/* Sau khi khối class search có kèm class active */
+.search.active .fa-magnifying-glass {
+  color: #c00df7;
+  transition: 0.7s;
+}
